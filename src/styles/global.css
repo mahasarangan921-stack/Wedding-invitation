@@ -1,0 +1,18 @@
+:root {
+  --ink: #3a2412;
+  --ink-soft: #6b4a2e;
+  --gold: #8f6418;
+  --gold-l: #d9b25f;
+  --cream: #fff4dc;
+  --font-d: 'Cinzel', 'Times New Roman', serif;
+  --font-b: 'Cormorant Garamond', Georgia, serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { font-family: var(--font-b); font-size: 1.22rem; line-height: 1.5; color: var(--ink); background: #1a1410; -webkit-font-smoothing: antialiased; }
+button, input, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid #f0b43c; outline-offset: 3px; border-radius: 6px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}

@@ -1,0 +1,10 @@
+.evening { position: relative; overflow: hidden; color: #fdeedd;
+  background: linear-gradient(180deg, #f2c58a 0, #e8987a 90px, #b8648a 200px, #7a4f86 320px, #4a3d78 700px, #2f2c5a 1300px, #211f43 100%); }
+.sun { position: absolute; left: 50%; top: 10px; width: 340px; height: 340px; transform: translateX(-50%); pointer-events: none;
+  background: radial-gradient(circle, rgba(255, 238, 195, 0.95) 0, rgba(255, 200, 125, 0.5) 28%, transparent 66%); }
+.evening-lights { position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; }
+.evening .sec { position: relative; z-index: 1; }
+.sec-reception { padding-top: clamp(14rem, 36vw, 19rem); padding-bottom: 3rem; }
+.reception-date { margin-top: 1.2rem; font-family: var(--font-d); letter-spacing: 0.22em; font-size: clamp(1.15rem, 4.6vw, 1.8rem); color: #ffe3a0; text-shadow: 0 2px 16px rgba(20, 10, 40, 0.5); }
+.reception-date span { display: block; margin-top: 0.4rem; font-family: var(--font-b); font-style: italic; letter-spacing: 0.06em; font-size: 1.2rem; color: #fdeedd; }
+.sec-letter { padding-top: 3rem; padding-bottom: 8rem; }
