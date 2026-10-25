@@ -1,0 +1,37 @@
+.env-stage { display: flex; flex-direction: column; align-items: center; }
+.env { position: relative; display: block; width: min(86vw, 400px); aspect-ratio: 1.5; margin: 2.2rem auto 0; padding: 0; border: 0; background: none; perspective: 900px; filter: drop-shadow(0 18px 24px rgba(10, 6, 30, 0.5)); transition: transform 0.4s; }
+.env:not(:disabled):hover { transform: translateY(-4px) rotate(-0.6deg); }
+.env > span { position: absolute; display: block; }
+.env-back { inset: 0; border-radius: 4px; background: linear-gradient(160deg, #cdb584, #b99d68); }
+.env-paper { left: 7%; right: 7%; top: 8%; bottom: 8%; background: #fbf3e1; border-radius: 3px; transition: transform 0.9s 0.45s ease; }
+.is-open .env-paper { transform: translateY(-42%); }
+.env-l, .env-r, .env-b { inset: 0; }
+.env-l { clip-path: polygon(0 0, 52% 54%, 0 100%); background: linear-gradient(120deg, #e8d6ae, #d8c293); }
+.env-r { clip-path: polygon(100% 0, 48% 54%, 100% 100%); background: linear-gradient(240deg, #e8d6ae, #d4bd8d); }
+.env-b { clip-path: polygon(0 100%, 50% 46%, 100% 100%); background: linear-gradient(#eedcb6, #dcc79a); }
+.env-flap { left: 0; right: 0; top: 0; height: 56%; transform-origin: top center; clip-path: polygon(0 0, 100% 0, 50% 100%); background: linear-gradient(#f0e0bb, #d9c18f); z-index: 4; transition: transform 0.85s ease, z-index 0s 0.4s; }
+.is-open .env-flap { transform: rotateX(180deg); z-index: 1; }
+.env-seal { left: 50%; top: 56%; width: 58px; height: 58px; margin: -29px 0 0 -29px; border-radius: 50%; z-index: 5; display: grid !important; place-items: center; font-family: var(--font-d); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; color: #f6d78a;
+  background: radial-gradient(circle at 35% 30%, #c4483c, #8a1f1c 72%); box-shadow: 0 3px 8px rgba(0, 0, 0, 0.45), inset 0 0 0 3px rgba(255, 210, 140, 0.18); transition: opacity 0.4s; }
+.is-open .env-seal { opacity: 0; }
+.env-hint { margin-top: 1.4rem; font-style: italic; color: #f6e4c4; }
+
+.paper { max-width: 560px; margin: 0 auto; padding: clamp(1.6rem, 5vw, 2.6rem); text-align: left; color: var(--ink); border-radius: 6px;
+  background: linear-gradient(#fcf5e4, #f6ead0); box-shadow: 0 24px 50px rgba(10, 6, 30, 0.5), inset 0 0 0 1px rgba(143, 100, 24, 0.2); }
+.paper-title { font-family: var(--font-b); font-style: italic; font-weight: 500; text-align: center; font-size: clamp(1.7rem, 6.4vw, 2.3rem); line-height: 1.2; margin-bottom: 1.6rem; }
+.field-label { display: block; font-family: var(--font-d); font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.35rem; }
+.field-label em { font-family: var(--font-b); text-transform: none; letter-spacing: 0.02em; font-size: 1rem; }
+.input, .textarea { width: 100%; padding: 0.7rem 0.9rem; border-radius: 6px; border: 1px solid rgba(143, 100, 24, 0.45); background: rgba(255, 255, 255, 0.65); font-size: 1.2rem; }
+.textarea { resize: vertical; min-height: 11rem; line-height: 1.5; }
+.input::placeholder, .textarea::placeholder { color: #8a6f55; font-style: italic; }
+.toggle { display: grid; grid-template-columns: 1fr 1fr; margin: 1.4rem 0 1rem; padding: 4px; border-radius: 999px; background: rgba(143, 100, 24, 0.14); }
+.toggle button { min-height: 46px; border: 0; border-radius: 999px; background: transparent; font-size: 1.05rem; color: var(--ink-soft); padding: 0 0.4rem; }
+.toggle button.on { background: #3a2412; color: #fbe9c4; font-weight: 600; }
+.wish-title { font-family: var(--font-d); font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem; }
+.under { display: flex; justify-content: space-between; align-items: center; min-height: 40px; margin-top: 0.3rem; }
+.count { font-size: 0.95rem; color: #7a6048; }
+.link { background: none; border: 0; padding: 0.4rem 0; min-height: 44px; font-size: 1.1rem; color: #7a4a0c; text-decoration: underline; text-underline-offset: 3px; }
+.link-soft { display: block; margin: 0.4rem auto 0; color: var(--ink-soft); font-size: 1rem; }
+.link:disabled { opacity: 0.4; cursor: not-allowed; }
+.btn-send { width: 100%; margin-top: 0.8rem; }
+.note { margin-top: 1rem; padding: 0.8rem 1rem; border-radius: 6px; background: rgba(143, 100, 24, 0.12); font-size: 1.08rem; text-align: center; }
